@@ -16,12 +16,12 @@ export class TeamComponent {
         image: 'assets/images/avtar/102.png',
         name: 'Juan Pérez',
         designation: 'Web & App developer',
-        social: this._sanitizer.bypassSecurityTrustHtml(''),
+        social: null
       }, {
         image: 'assets/images/avtar/101.png',
         name: 'Marco Sáenz',
         designation: 'Web & App developer',
-        social: this._sanitizer.bypassSecurityTrustHtml(''),
+        social: null
       }]
 
 

@@ -23,21 +23,23 @@
         <li class="nav-item">
           <a class="nav-link" href="/home#team" [pageScrollOffset]="80" pageScroll>Equipo</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home#contact" data-menuanchor="contact" [pageScrollOffset]="80" pageScroll>Contactanos</a>
+          </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#blog" [pageScrollOffset]="80" pageScroll data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">blog</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/list'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">blog list</a></li>
+    <!--       <a class="nav-link dropdown-toggle" href="#blog" [pageScrollOffset]="80" pageScroll data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">blog</a> -->
+    <a class="nav-link" [routerLink]="'/blog/list'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Blog</a></li>
+          <!-- <ul class="dropdown-menu"> -->
+           <!--  <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/list'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">blog list</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/details'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">blog details</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/left-sidebar'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">leftsidebar</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/right-sidebar'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">rightsidebar</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/details-left-sidebar'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">details leftsidebar</a></li>
-            <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/details-right-sidebar'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">details rightsidebar</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact" data-menuanchor="contact" [pageScrollOffset]="80" pageScroll>contact us</a>
-        </li>
-        <li class="nav-item dropdown">
+            <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/details-right-sidebar'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">details rightsidebar</a></li> -->
+        <!--   </ul> -->
+      <!--   </li> -->
+       
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other page</a>
           <ul class="dropdown-menu">
             <li class="nav-item"><a class="nav-link" [routerLink]="'/pages/sign-in'">sign in</a></li>
@@ -49,7 +51,7 @@
             <li class="nav-item"><a class="nav-link" [routerLink]="'/pages/faq'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">FAQ</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="'/pages/download'">Download</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
