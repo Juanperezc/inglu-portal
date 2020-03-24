@@ -102,7 +102,6 @@
       font-weight: 600;
       margin-top: 30px;
       color: $color_tundora;
-      text-transform: capitalize;
       letter-spacing: 1px;
     }
 
@@ -117,7 +116,6 @@
       line-height: 28px;
       font-size: 14px;
       font-weight: 400;
-      text-transform: uppercase;
       margin-top: 15px;
       margin-bottom: 0;
       letter-spacing: 0.1em;
@@ -143,7 +141,6 @@
       font-size: 15px;
       color: $color_tapa;
       letter-spacing: 0.03em;
-      text-transform: capitalize;
       &.landing-caption {
         font-size: 30px;
         line-height: 1.5;
@@ -267,7 +264,6 @@
         h5 {
           color: $color_tundora;
           font-weight: 600;
-          text-transform: capitalize;
         }
         p {
           line-height: 24px;
@@ -1612,7 +1608,6 @@
       h5 {
         margin: 0;
         line-height: 1;
-        text-transform: capitalize;
         display: inline-block;
         font-weight: 600;
       }
@@ -1906,7 +1901,6 @@
         margin-bottom: 0;
       }
       h6 {
-        text-transform: capitalize;
         margin: 0;
       }
       p {
@@ -2546,6 +2540,7 @@
     .feature-subtitle h3 {
       padding-left: 35px;
       margin-top: 8px;
+      text-transform: capitalize;
     }
 
     .screenshot-carousel .owl-item {
@@ -2600,7 +2595,6 @@
           font-size: 14px;
           font-weight: 600;
           color: $color_tundora;
-          text-transform: capitalize;
           letter-spacing: 1px;
           overflow: hidden;
           text-overflow: ellipsis;

@@ -14,7 +14,7 @@ export class BlogComponent {
         image: 'assets/images/blog/Coronavirus.jpg',
         date: '8 marzo 2020',
         title: 'Coronavirus y diabetes: preparados, no asustados',
-        postedBy: 'publicado por Pedro Hernandez',
+        postedBy: 'Publicado por Pedro Hernandez',
       }, {
         image: 'assets/images/blog/tel.jpg',
         date: '1 marzo 2020',
