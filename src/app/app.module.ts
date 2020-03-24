@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { Http, HttpModule } from '@angular/http';
@@ -8,6 +9,7 @@ import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { BlogComponent } from './blog/blog.component';
+
 import * as $ from 'jquery';
 
 @NgModule({
@@ -18,6 +20,7 @@ import * as $ from 'jquery';
   ],
   imports: [
     BrowserModule,
+   
     HttpModule,
     BrowserAnimationsModule,
     SharedModule,
