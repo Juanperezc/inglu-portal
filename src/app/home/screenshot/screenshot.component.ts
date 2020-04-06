@@ -11,30 +11,28 @@ export class ScreenshotComponent {
     
     // Carousel Images  
 	public carouselImages = [{
-	    image: 'assets/images/app/1.jpg',
+	    image: 'assets/images/app/inicio.png',
 	  }, {
-	    image: 'assets/images/app/2.jpg',
+	    image: 'assets/images/app/citas.png',
 	  }, {
-	    image: 'assets/images/app/3.jpg',
+	    image: 'assets/images/app/cita-detalles.png',
 	  }, {
-	    image: 'assets/images/app/4.jpg',
+	    image: 'assets/images/app/cita-seleccion.png',
 	  }, {
-	    image: 'assets/images/app/5.jpg',
+	    image: 'assets/images/app/eventos.png',
 	  }, {
-	    image: 'assets/images/app/6.jpg',
+	    image: 'assets/images/app/evento-detalle.png',
       }, {
-	    image: 'assets/images/app/7.jpg',
+	    image: 'assets/images/app/perfil.png',
 	  }, {
-	    image: 'assets/images/app/8.jpg',
+	    image: 'assets/images/app/notificaciones.png',
 	  }, {
-	    image: 'assets/images/app/9.jpg',
+	    image: 'assets/images/app/configuracion-notificaciones.png',
 	  }, {
-	    image: 'assets/images/app/10.jpg',
+	    image: 'assets/images/app/recordatorios.png',
 	  }, {
-	    image: 'assets/images/app/11.jpg',
-	  }, {
-	    image: 'assets/images/app/12.jpg',
-    }]
+	    image: 'assets/images/app/recordatorio-nuevo.png',
+	  }]
   
 	// Carousel Options
 	public carouselOptions: any ={
