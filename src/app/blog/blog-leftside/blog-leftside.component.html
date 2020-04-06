@@ -3,14 +3,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-6 col-text-center d-align-center">
-        <h2 class="title">Left<span> Sidebar</span></h2>
+        <h2 class="title">Información de Interes y Ultimas Noticias</h2>
       </div>
       <div class="col-md-6 col-sm-6 col-text-center">
         <nav aria-label="breadcrumb" class="blog-bradcrumb ">
           <ol class="breadcrumb bg-transparent mb-0">
             <li class="breadcrumb-item"><a [routerLink]="'/home'">Home</a></li>
-            <li class="breadcrumb-item"><a [routerLink]="'/blog/list'">Blog</a></li>
-            <li class="breadcrumb-item active"><a [routerLink]="'/blog/left-sidebar'">Left Sidebar</a></li>
+            <li class="breadcrumb-item active"><a [routerLink]="'/blog/left-sidebar'">Noticias</a></li>
           </ol>
         </nav>
       </div>
@@ -126,28 +125,28 @@
       <div class="col-md-4 col-lg-3 order-md-first list-sidebar">
         <div class="sidebar">
           <div class="sidebar-space">
-            <h4 class="blog-title">blog Category</h4>
+            <h4 class="blog-title">Categorias</h4>
             <div class="blog-divider"></div>
             <div class="blog-cat-detail">
               <ul>
                 <li class="marg-15">
                   <a [routerLink]="'/blog/details'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum is simply
+                      <i class="fa fa-angle-right" aria-hidden="true"></i> Novedades
                   </a>
                 </li>
                 <li class="marg-15">
                   <a [routerLink]="'/blog/details'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> There Are Many Variations
+                      <i class="fa fa-angle-right" aria-hidden="true"></i> Nutrición
                   </a>
                 </li>
                 <li class="marg-15">
                   <a [routerLink]="'/blog/details'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> it has survived not only five
+                      <i class="fa fa-angle-right" aria-hidden="true"></i> Entrenamientos Físicos
                   </a>
                 </li>
                 <li class="marg-15">
                   <a [routerLink]="'/blog/details'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum has been the.
+                      <i class="fa fa-angle-right" aria-hidden="true"></i> Buenos Hábitos
                   </a>
                 </li>
                 <li class="marg-15">
@@ -162,46 +161,49 @@
             <h4 class="blog-title">Popular Tag</h4>
             <div class="blog-divider"></div>
             <div class="tags marg-20">
-              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Responsive design</span></a>
-              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Color options</span></a>
+              <a [routerLink]="'/blog/left-side'"><span class="badge badge-theme">Alimentación</span></a>
+              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Stevia</span></a>
               <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Multiple demos</span></a>
-              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Dedicated support</span></a>
+              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Suplementos</span></a>
               <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Documentation</span></a>
-              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">PSD is included</span></a>
-              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Text</span></a>
+              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Coronavirus</span></a>
+              <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Insulina</span></a>
               <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Support</span></a>
               <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Responsive</span></a>
               <a [routerLink]="'/blog/left-sidebar'"><span class="badge badge-theme">Design</span></a>
             </div>
           </div>
-          <h4 class="blog-title">Recent Post</h4>
+          <h4 class="blog-title">Ultimas Publicaciones</h4>
           <div class="blog-divider"></div>
           <div class="recent-blog marg-20">
             <div class="media">
               <img class="mr-3" src="assets/images/blog/1.jpg" alt="blog">
+              <!-- <img class="mr-3 img img-fluid" src="assets/images/blog/Coronavirus.jpg" alt="blog"> -->
               <div class="media-body">
                 <a [routerLink]="'/blog/details'">
-                  <h5 class="mt-0">Lorem Ipsum Is Simply Dummy</h5>
+                  <h5 class="mt-0">Coronavirus y diabetes: preparados, no asustados</h5> <!-- como poner lo de los 3 punticos -->
                 </a>
-                <p class="m-0">05 March 2011</p>
+                <p class="m-0">25 Marzo 2020</p>
               </div>
             </div>
             <div class="media">
               <img class="mr-3" src="assets/images/blog/2.jpg" alt="blog">
+              <!-- <img class="mr-3 img img-fluid" src="assets/images/blog/Ciclismo.jpg" alt="blog"> -->
               <div class="media-body">
                 <a [routerLink]="'/blog/details'">
-                  <h5 class="mt-0">Lorem Ipsum has been the</h5>
+                  <h5 class="mt-0">Diabetes y ciclismo: sí se puede</h5>
                 </a>
-                <p class="m-0">14 january 2015</p>
+                <p class="m-0">1 Marzo 2020</p>
               </div>
             </div>
             <div class="media">
               <img class="mr-3" src="assets/images/blog/3.jpg" alt="blog">
+              <!-- <img class="mr-3 img img-fluid" src="assets/images/blog/Adolescencia.jpg" alt="blog"> -->
               <div class="media-body">
                 <a [routerLink]="'/blog/details'">
-                  <h5 class="mt-0">all the Lorem Ipsum Generator</h5>
+                  <h5 class="mt-0">Como afrontar la diabetes en la adolescencia</h5>
                 </a>
-                <p class="m-0">30 November 2015</p>
+                <p class="m-0">18 Febrero 2020</p>
               </div>
             </div>
           </div>
