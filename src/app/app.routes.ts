@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { DemoComponent } from './demo/demo.component';
 import { BlogComponent } from './blog/blog.component';
+import { ClubInfoComponent} from './club-info/club-info.component'
 
 export const rootRouterConfig: Routes = [
   { 
@@ -20,6 +21,11 @@ export const rootRouterConfig: Routes = [
     path: 'blog',
     component: BlogComponent,
     loadChildren: './blog/blog.module#BlogModule'   
+  },
+  { 
+    path: 'club-info',
+    component: ClubInfoComponent,
+    loadChildren: './club-info/club-info.module#ClubInfoModule'   
   },
   { 
     path: 'pages',

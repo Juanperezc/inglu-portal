@@ -11,7 +11,6 @@ import { HomeThreeComponent } from './versions/home-three/home-three.component';
 import { IntroOneComponent } from './intro-one/intro-one.component';
 import { IntroTwoComponent } from './intro-two/intro-two.component';
 import { IntroThreeComponent } from './intro-three/intro-three.component';
-import { AboutComponent } from './about/about.component';
 import { FeatureComponent } from './feature/feature.component';
 import { ScreenshotComponent } from './screenshot/screenshot.component';
 import { TeamComponent } from './team/team.component';
@@ -37,7 +36,6 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     IntroOneComponent,
     IntroTwoComponent,
     IntroThreeComponent,
-    AboutComponent,
     FeatureComponent,
     ScreenshotComponent,
     TeamComponent,

@@ -12,25 +12,18 @@
           <a class="nav-link" href="/home#home" [pageScrollOffset]="80" pageScroll>Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home#about" [pageScrollOffset]="80" pageScroll>¿Quienes somos?</a>
+          <a class="nav-link" [routerLink]="'/club-info/about'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Información del Club</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home#feature" [pageScrollOffset]="80" pageScroll>Características</a>
+            <a class="nav-link" href="/home#contact" data-menuanchor="contact" [pageScrollOffset]="80" pageScroll>Registrarse</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home#screenshot" [pageScrollOffset]="80" pageScroll>Imágenes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/home#team" [pageScrollOffset]="80" pageScroll>Equipo</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/home#contact" data-menuanchor="contact" [pageScrollOffset]="80" pageScroll>Contactanos</a>
+            <a class="nav-link" [routerLink]="'/pages/faq'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">FAQ</a>
           </li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="'/pages/faq'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">FAQ</a></li>
         <li class="nav-item dropdown">
         
     <!--       <a class="nav-link dropdown-toggle" href="#blog" [pageScrollOffset]="80" pageScroll data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">blog</a> -->
-    <a class="nav-link" [routerLink]="'/blog/left-side'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Información de Interes</a></li>
+    <a class="nav-link" [routerLink]="'/blog/info'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Información de Interes</a></li>
           <!-- <ul class="dropdown-menu"> -->
            <!--  <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/list'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">blog list</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/details'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">blog details</a></li>

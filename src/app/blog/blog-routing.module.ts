@@ -21,7 +21,7 @@ const routes: Routes = [
         component: BlogDetailsComponent,
       }, 
       {
-        path: 'left-side',
+        path: 'info',
         component: BlogLeftsideComponent,
       }, 
       {

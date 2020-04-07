@@ -8,13 +8,15 @@ import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { BlogComponent } from './blog/blog.component';
+import {ClubInfoComponent} from './club-info/club-info.component';
 import * as $ from 'jquery';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    BlogComponent
+    BlogComponent,
+    ClubInfoComponent
   ],
   imports: [
     BrowserModule,
