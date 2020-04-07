@@ -16,9 +16,11 @@ export class ContactUsComponent implements OnInit {
   ngOnInit() {
   	this.contactForm = this.fb.group({
       name: ['', Validators.required],
+      apellido: ['', Validators.required],
       phone: ['', Validators.required],
       email: ['', Validators.email],
-      message: ['', Validators.required]
+      message: ['', Validators.required],
+      cedula: ['', Validators.required],
     })
   }
 
