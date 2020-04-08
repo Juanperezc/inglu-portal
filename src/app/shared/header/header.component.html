@@ -11,7 +11,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/home#home" [pageScrollOffset]="80" pageScroll>Inicio</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="info">
           <a class="nav-link" [routerLink]="'/club-info/about'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Información del Club</a>
         </li>
         <li class="nav-item">
@@ -20,6 +20,9 @@
         <li class="nav-item">
             <a class="nav-link" [routerLink]="'/pages/faq'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">FAQ</a>
           </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home#message" data-menuanchor="message" [pageScrollOffset]="80" pageScroll>Contactanos</a>
+        </li>
         <li class="nav-item dropdown">
         
     <!--       <a class="nav-link dropdown-toggle" href="#blog" [pageScrollOffset]="80" pageScroll data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">blog</a> -->

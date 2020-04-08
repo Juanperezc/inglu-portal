@@ -1,0 +1,59 @@
+<!-- Contact Section start -->
+<section id="contact" class="contact">
+  <div class="contact-decor">
+    <div class="contact-circle1"><img src="assets/images/main-banner12.png" alt=""></div>
+    <div class="contact-circle2"><img src="assets/images/main-banner1.png" alt=""></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="contact-us">
+          <div class="w-100">
+            <h2 class="title">Si tienes alguna duda, no dudes en enviarnos un mensaje!</h2>
+            <form class="theme-form" [formGroup]="contactForm">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 md-fgrup-margin"> 
+                    <input type="text" name="name" [formControl]="contactForm.controls['name']" class="form-control" autocomplete="off" placeholder="Nombres" required="required">
+                    <div *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required" class="text text-danger">Nombre es requerido</div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 md-fgrup-margin">
+                    <input type="email" name="email" [formControl]="contactForm.controls['email']" class="form-control" autocomplete="off" id="exampleFormControlInput1" placeholder="Correo" required="required">
+                    <div *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.email" class="text text-danger">Correo invalido</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 md-fgrup-margin">
+                    <input type="tel" name="phone" [formControl]="contactForm.controls['phone']" class="form-control" autocomplete="off" placeholder="Telefono" required="required" minlength=10>
+                    <div *ngIf="contactForm.controls.phone.touched && contactForm.controls.phone.errors?.required " class="text text-danger">El telefono es requerido</div>
+                    <div *ngIf="contactForm.controls.phone.touched && contactForm.controls.phone.errors?.minlength " class="text text-danger">Se requieren al menos 10 digitos</div>
+                  </div>
+                  <div class="col-sm-12 col-md-6"> 
+                    <div class="form-group mensaje">
+                      <textarea class="form-control" name="message" [formControl]="contactForm.controls['message']" id="exampleFormControlTextarea1" autocomplete="off" rows="4" placeholder="Mensaje" required="required"></textarea>
+                      <div *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required" class="text text-danger">Mensaje es requerido</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="form-button">
+                <button type="submit" [disabled]="!contactForm.valid" class="btn btn-custom theme-color">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-medium-none-lg">
+      <!--   <div class="contact-right">
+          <img src="assets/images/Contact-info.png" class="img-fluid" alt="">
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Section End -->

@@ -12,7 +12,7 @@ export class BlogComponent {
     // Blog Carousel
     public blog = [{
         image: 'assets/images/blog/Coronavirus.jpg',
-        date: '8 marzo 2020',
+        date: '25 marzo 2020',
         title: 'Coronavirus y diabetes: preparados, no asustados',
         postedBy: 'Publicado por Pedro Hernandez',
       }, {

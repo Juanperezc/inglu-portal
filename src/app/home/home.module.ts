@@ -11,10 +11,11 @@ import { HomeThreeComponent } from './versions/home-three/home-three.component';
 import { IntroOneComponent } from './intro-one/intro-one.component';
 import { IntroTwoComponent } from './intro-two/intro-two.component';
 import { IntroThreeComponent } from './intro-three/intro-three.component';
-import { FeatureComponent } from './feature/feature.component';
 import { ScreenshotComponent } from './screenshot/screenshot.component';
 import { TeamComponent } from './team/team.component';
 import { BlogComponent } from './blog/blog.component';
+import {MessageUsComponent } from './message-us/message-us.component';
+import { IntroductionComponent} from './introduction/introduction.component';
 import { PriceComponent } from './price/price.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -36,10 +37,11 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     IntroOneComponent,
     IntroTwoComponent,
     IntroThreeComponent,
-    FeatureComponent,
+    IntroductionComponent,
     ScreenshotComponent,
     TeamComponent,
     BlogComponent,
+    MessageUsComponent,
     PriceComponent,
     TestimonialComponent,
     ContactUsComponent,
