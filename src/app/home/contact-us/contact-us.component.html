@@ -61,8 +61,8 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col-sm-12 col-md-6 md-fgrup-margin"> 
-                    <input type="text" name="help" [formControl]="contactForm.controls['help']" class="form-control" autocomplete="off" placeholder="Reservado para el datepicker" required="required">
-                    <div *ngIf="contactForm.controls.help.touched && contactForm.controls.help.errors?.required" class="text text-danger">Nombre es requerido</div>
+                    <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" class="form-control" placeholder="Fecha de Nacimiento">
+                    <owl-date-time [pickerType]="'calendar'" #dt></owl-date-time>
                   </div>
                   <div class="col-sm-12 col-md-6"> 
                     <div class="form-group mensaje">

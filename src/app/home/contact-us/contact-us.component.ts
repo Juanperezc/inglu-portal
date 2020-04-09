@@ -22,7 +22,7 @@ export class ContactUsComponent implements OnInit {
       email: ['', Validators.email],
       message: ['', Validators.required],
       cedula: ['', Validators.required,Validators.minLength[4]],
-      help: ['', Validators.required],
+      //help: ['', Validators.required],
     })
   }
 

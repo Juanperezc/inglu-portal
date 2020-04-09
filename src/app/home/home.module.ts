@@ -4,6 +4,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OwlModule } from 'ngx-owl-carousel';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+//import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { HomeOneComponent } from './versions/home-one/home-one.component';
 import { HomeTwoComponent } from './versions/home-two/home-two.component';
@@ -28,7 +30,10 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    OwlModule
+    OwlModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+    //BrowserAnimationsModule
   ],
   declarations: [
     HomeOneComponent,
