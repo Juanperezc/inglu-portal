@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light theme-nav fixed-top" [class.darkHeader]="darkHeader">
   <div class="container">
     <a class="navbar-brand" [routerLink]="'/home'"><img src="assets/images/logo.png" alt="logo">
-    INGLU</a>
+    Club Diabetico las Mercedes</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,24 +11,22 @@
         <li class="nav-item">
           <a class="nav-link" href="/home#home" [pageScrollOffset]="80" pageScroll>Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/home#about" [pageScrollOffset]="80" pageScroll>¿Quienes somos?</a>
+        <li class="nav-item" id="info">
+          <a class="nav-link" [routerLink]="'/club-info/about'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Información del Club</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home#feature" [pageScrollOffset]="80" pageScroll>Características</a>
+            <a class="nav-link" href="/home#contact" data-menuanchor="contact" [pageScrollOffset]="80" pageScroll>Registrarse</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home#screenshot" [pageScrollOffset]="80" pageScroll>Imágenes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/home#team" [pageScrollOffset]="80" pageScroll>Equipo</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/home#contact" data-menuanchor="contact" [pageScrollOffset]="80" pageScroll>Contactanos</a>
+            <a class="nav-link" [routerLink]="'/pages/faq'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">FAQ</a>
           </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home#message" data-menuanchor="message" [pageScrollOffset]="80" pageScroll>Contactanos</a>
+        </li>
         <li class="nav-item dropdown">
+        
     <!--       <a class="nav-link dropdown-toggle" href="#blog" [pageScrollOffset]="80" pageScroll data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">blog</a> -->
-    <a class="nav-link" [routerLink]="'/blog/list'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Blog</a></li>
+    <a class="nav-link" [routerLink]="'/blog/info'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Información de Interes</a></li>
           <!-- <ul class="dropdown-menu"> -->
            <!--  <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/list'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">blog list</a></li>
             <li class="nav-item"><a class="nav-link" [routerLink]="'/blog/details'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">blog details</a></li>
