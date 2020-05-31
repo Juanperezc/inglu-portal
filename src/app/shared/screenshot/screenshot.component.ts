@@ -1,16 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ClubImageItemService } from '../../services/ClubImageItemService.service';
+import { ClubImageService } from '../../services/ClubImageService.service';
 
 @Component({
   selector: 'app-screenshot',
   templateUrl: './screenshot.component.html',
   styleUrls: ['./screenshot.component.scss']
 })
-export class ScreenshotComponent {
+export class ScreenshotComponent implements OnInit {
+	private imageItems = [];
+	private imageInfo: any = null;
+
+	async ngOnInit() {
+		await this.loadImageInfo();
+		await this.loadImageItems();
+	
+	}
     
-    constructor() { }
+    constructor(private clubImageInfoService: ClubImageService, private clubImageItemService: ClubImageItemService) { }
     
     // Carousel Images  
-	public carouselImages = [{
+	public carouselImages = [/* {
 	    image: 'assets/images/app/inicio.png',
 	  }, {
 	    image: 'assets/images/app/citas.png',
@@ -32,8 +42,39 @@ export class ScreenshotComponent {
 	    image: 'assets/images/app/recordatorios.png',
 	  }, {
 	    image: 'assets/images/app/recordatorio-nuevo.png',
-	  }]
+	  } */]
   
+	  async loadImageInfo(){
+		try {
+		/* 	GlobalService.ShowSweetLoading(); */
+			const image: any = await this.clubImageInfoService.show(1);
+		/* 	GlobalService.SwalDeleteItem(); */
+			const imageData = image.data;
+			this.imageInfo = imageData;
+			console.log('imageData', imageData)
+		  } catch (error) {
+			console.error("error", error);
+			/* GlobalService.CloseSweet(); */
+		  }
+	  }
+	  async loadImageItems(){
+		try {
+		/* 	GlobalService.ShowSweetLoading(); */
+			const imageItems: any = await this.clubImageItemService.index();
+		
+			const imageItemsData = imageItems.data;
+	
+			imageItemsData.forEach(element => {
+				console.log(element,element)
+				this.carouselImages.push({image: element.img})
+			});
+		
+			console.log('imageItemsData', imageItemsData)
+		  } catch (error) {
+			console.error("error", error);
+			/* GlobalService.CloseSweet(); */
+		  }
+	  }
 	// Carousel Options
 	public carouselOptions: any ={
 	    loop:true,

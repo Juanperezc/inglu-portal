@@ -12,6 +12,7 @@ import { BlogComponent } from './blog/blog.component';
 
 import {ClubInfoComponent} from './club-info/club-info.component';
 import * as $ from 'jquery';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import * as $ from 'jquery';
   ],
   imports: [
     BrowserModule,
-   
+    HttpClientModule,
     HttpModule,
     BrowserAnimationsModule,
     SharedModule,
