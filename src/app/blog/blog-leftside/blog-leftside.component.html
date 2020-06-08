@@ -6,10 +6,12 @@
         <h2 class="title">Información de Interes y Ultimas Noticias</h2>
       </div>
       <div class="col-md-6 col-sm-6 col-text-center">
-        <nav aria-label="breadcrumb" class="blog-bradcrumb ">
+        <nav aria-label="breadcrumb" class="blog-bradcrumb">
           <ol class="breadcrumb bg-transparent mb-0">
             <li class="breadcrumb-item"><a [routerLink]="'/home'">Home</a></li>
-            <li class="breadcrumb-item active"><a [routerLink]="'/blog/info'">Noticias</a></li>
+            <li class="breadcrumb-item active">
+              <a [routerLink]="'/blog/info'">Noticias</a>
+            </li>
           </ol>
         </nav>
       </div>
@@ -23,108 +25,29 @@
     <div class="row">
       <div class="col-md-8 col-lg-9 blog-sec">
         <div class="row blog-list">
-          <div class="col-lg-6 col-md-12">
-            <div class="blog-item">
+          <div class="col-md-12">
+            <div
+              *ngFor="let blog of blogItems"
+              class="blog-item col-lg-6 col-md-12"
+            >
               <div class="blog-block">
                 <div class="blog-box">
-                  <div class="overflow-hidden"><a [routerLink]="'/blog/details'"><img src="assets/images/blog/Coronavirus.jpg" alt="blog" class="img-fluid"></a></div>
+                  <div class="overflow-hidden">
+                    <a [routerLink]="'/blog/details/' + blog.id"
+                      ><img
+                        [src]="blog.img"
+                        alt="blog"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
               <div class="blog-text">
-                <a [routerLink]="'/blog/details'">
-                  <h3>{{tituloNoticias[0]}}.</h3>
-                  <p>Dada la alarma sanitaria y social que está provocando la pandemia de coronavirus, y su especial impacto en las poblaciones de edad más avanzada y/o con enfermedades asociadas, se quiere mandar
-                     un mensaje de calma y tranquilidad, así como se ofrecen algunas recomendaciones prácticas para las personas con diabetes. .</p>
+                <a [routerLink]="'/blog/details/' + blog.id">
+                  <h3>{{ blog.title }}</h3>
+                  <p>{{ blog.description }}</p>
                 </a>
-                <h5>Pedro Hernandez</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="blog-item">
-              <div class="blog-block">
-                <div class="blog-box">
-                  <div class="overflow-hidden"><a [routerLink]="'/blog/details'"><img src="assets/images/blog/Ciclismo.jpg" alt="blog" class="img-fluid img500"></a></div>
-                </div>
-              </div>
-              <div class="blog-text">
-                <a [routerLink]="'/blog/details'">
-                  <h3>{{tituloNoticias[1]}}</h3>
-                  <p>El suizo Oliver Behringer, el británico Samuel Brand, el finlandés Joonas Henttala, el español David Lozano, el italiano Andrea Perón y el uzbeco Ulugbek Sidov representan al Novo Nordisk en el Tour Colombia y llevan un mensaje claro: la diabetes no es ningún impedimento para ser ciclista profesional.
-                  </p>
-                </a>
-                <h5>Rafael Vizcaya</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="blog-item">
-              <div class="blog-block">
-                <div class="blog-box">
-                  <div class="overflow-hidden"><a [routerLink]="'/blog/details'"><img src="assets/images/blog/Adolescencia.jpg" alt="blog" class="img-fluid img500"></a></div>
-                </div>
-              </div>
-              <div class="blog-text">
-                <a [routerLink]="'/blog/details'">
-                  <h3>{{tituloNoticias[2]}}</h3>
-                  <p>La Fundación para la Diabetes crea un Consejo Asesor Juvenil, un grupo de 19 adolescentes con el objetivo de dar respuesta a adolescentes que se encuentran en su misma situación.</p>
-                  <p>La cocina o el deporte son herramientas de visibilización y normalización de la diabetes, pero ¿cómo afecta esta enfermedad a un segmento poblacional tan sensible como los adolescentes?</p>
-                </a>
-                <h5>Vanessa Garcia</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="blog-item">
-              <div class="blog-block">
-                <div class="blog-box">
-                  <div class="overflow-hidden"><a [routerLink]="'/blog/details'"><img src="assets/images/blog/tel.jpg" alt="blog" class="img-fluid img500"></a></div>
-                </div>
-              </div>
-              <div class="blog-text">
-                <a [routerLink]="'/blog/details'">
-                  <h3>{{tituloNoticias[3]}}</h3>
-                  <p>
-                    Según un estudio nuevo, los pacientes con diabetes tipo 2 (DT2) que usan dispositivos móviles para acceder a los portales de control de la diabetes tenían más adherencia al tratamiento y mejores niveles de hemoglobina
-                    glicosilada A1c (HbA1c).</p>
-                </a>
-                <h5>James Clark</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="blog-item">
-              <div class="blog-block">
-                <div class="blog-box">
-                  <div class="overflow-hidden"><a [routerLink]="'/blog/details'"><img src="assets/images/blog/odontologo.jpg" alt="blog" class="img-fluid img500"></a></div>
-                </div>
-              </div>
-              <div class="blog-text">
-                <a [routerLink]="'/blog/details'">
-                  <h3>{{tituloNoticias[4]}}</h3>
-                  <p>Expertos del Colegio de Dentistas ofrecen unas pautas a seguir por las personas que padecen esta enfermedad, para evitar complicaciones asociadas a la diabetes y enfermedades de las encías.</p>
-                  <p>¿Puede la diabetes afectar a la salud bucodental? La respuesta es sí. Numerosos estudios demuestran la relación entre la patología diabética y enfermedades bucodentales graves como la periodontitis</p>
-                </a>
-                <h5>Ricardo Martinez</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="blog-item">
-              <div class="blog-block">
-                <div class="blog-box">
-                  <div class="overflow-hidden"><a [routerLink]="'/blog/details'"><img src="assets/images/blog/Farmacos.jpg" alt="blog" class="img-fluid img500"></a></div>
-                </div>
-              </div>
-              <div class="blog-text">
-                <a [routerLink]="'/blog/details'">
-                  <h3>{{tituloNoticias[5]}}</h3>
-                  <p>Investigadores del Helmholtz Zentrum München (Alemania),
-                    han demostrado por primera vez en un modelo experimental que una combinación de fármacos
-                    dirigida es capaz de restaurar la función de las células beta, lograr su rediferenciación y,
-                    por lo tanto, abrir potencialmente nuevas vías para la remisión de la diabetes.</p>
-                </a>
-                <h5>Klaus Schmit</h5>
+                <h5>{{ blog.author }}</h5>
               </div>
             </div>
           </div>
@@ -138,74 +61,40 @@
             <div class="blog-divider"></div>
             <div class="blog-cat-detail">
               <ul>
-                <li class="marg-15">
-                  <a [routerLink]="'/blog/info'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> {{categoria[0]}}
+                <li *ngFor="let cat of categories" class="marg-15">
+                  <a [href]="'/blog/info?category_id=' + cat.id">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    {{ cat.description }}
                   </a>
                 </li>
-                <li class="marg-15">
-                  <a [routerLink]="'/blog/info'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> {{categoria[1]}}
-                  </a>
-                </li>
-                <li class="marg-15">
-                  <a [routerLink]="'/blog/info'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> {{categoria[2]}}
-                  </a>
-                </li>
-                <li class="marg-15">
-                  <a [routerLink]="'/blog/info'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> {{categoria[3]}}
-                  </a>
-                </li>
-                <li class="marg-15">
-                  <a [routerLink]="'/blog/info'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> {{categoria[4]}}
-                  </a>
-                </li>
-                <li class="marg-15">
-                  <a [routerLink]="'/blog/info'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> {{categoria[5]}}
-                  </a>
-                </li>
-                <li class="marg-15">
-                  <a [routerLink]="'/blog/info'">
-                      <i class="fa fa-angle-right" aria-hidden="true"></i> {{categoria[6]}}
-                  </a>
-                </li>
+            
               </ul>
             </div>
           </div>
           <h4 class="blog-title">Ultimas Publicaciones</h4>
           <div class="blog-divider"></div>
           <div class="recent-blog marg-20">
-            <div class="media">
-              <img class="mr-3 img64" src="assets/images/blog/Coronavirus.jpg" alt="blog">
+            <div *ngFor="let blog of blogItemsShort" class="media">
+              <img
+                class="mr-3 img64"
+                [src]="blog.img"
+                alt="blog"
+              />
               <div class="media-body">
-                <a [routerLink]="'/blog/details'">
-                  <h5 class="mt-0">{{(tituloNoticias[0].length>15)? (tituloNoticias[0] | slice:0:15)+'...':(tituloNoticias[0])}}</h5> <!-- como poner lo de los 3 punticos -->
+                <a [routerLink]="'/blog/details' + blog.id">
+                  <h5 class="mt-0">
+                    {{
+                    blog.title > 15
+                        ? ( blog.title | slice: 0:15) + "..."
+                        : blog.title
+                    }}
+                  </h5>
+                  <!-- como poner lo de los 3 punticos -->
                 </a>
-                <p class="m-0">25 Marzo 2020</p>
+                <p class="m-0">{{blog.updated_at}}</p>
               </div>
             </div>
-            <div class="media">
-              <img class="mr-3 img64 img-fluid" src="assets/images/blog/Ciclismo.jpg" alt="blog">
-              <div class="media-body">
-                <a [routerLink]="'/blog/details'">
-                  <h5 class="mt-0">{{tituloNoticias[1]}}</h5>
-                </a>
-                <p class="m-0">1 Marzo 2020</p>
-              </div>
-            </div>
-            <div class="media">
-              <img class="mr-3 img64 img-fluid" src="assets/images/blog/Adolescencia.jpg" alt="blog">
-              <div class="media-body">
-                <a [routerLink]="'/blog/details'">
-                  <h5 class="mt-0">{{(tituloNoticias[2].length>15)? (tituloNoticias[2] | slice:0:15)+'...':(tituloNoticias[2])}}</h5>
-                </a>
-                <p class="m-0">18 Febrero 2020</p>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>

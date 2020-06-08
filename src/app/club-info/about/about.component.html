@@ -4,20 +4,19 @@
     <div class="about-circle1"><img src="assets/images/team1.png" alt="team1"></div>
     <div class="about-circle2"><img src="assets/images/main-banner1.png" alt="banner1"></div>
   </div>
-  <div class="container">
+  <div *ngIf="informationData" class="container">
     <div class="row ">
       <div class="col-md-5">
         <div class="about-contain">
           <div>
-            <h2 class="title">¿Qué es un club para personas con <span>diabetes?</span></h2>
-            <p class="caption-about">            
+            <h2 class="title">{{informationData && informationData.title}}</h2>
+            <p class="caption-about">
               <!--In-Glu es un sistema de información orientado al apoyo del manejo de los servicios médicos, más específicamente aquellos pertenecientes al club del diabético, siendo un sistema multi plataforma, proporciona acceso a los usuarios desde la comodidad de su teléfono celular o desde una página web. Generando información de alta fidelidad y relevante para los miembros del club, médicos asociados, y el grupo de apoyo;  brindando un mejor control, de seguimiento de manera efectiva, eficaz y eficiente, ayudando a la toma de decisiones tanto para el paciente como para los miembros de apoyo y médicos.--></p>
-                Es la organización de los propios pacientes, que bajo la supervisión médica y con el apoyo de los servicios de salud, sirve de escenario para la capacitación necesaria para el control de la diabetes.
-                El club estimula la participación activa e informada del paciente como un elemento indispensable para el autocuidado.
-            <!-- <div class="row sm-mb">
-              <div class="col-6">
-                <ul class="about-style">
-                  <li class="abt-hover">
+              {{ informationData && informationData.description }}
+              <!-- <div class="row sm-mb">
+               <div class="col-6">
+                 <ul class="about-style">
+                   <li class="abt-hover">
                     <div class="about-icon">
                       <div class="icon-hover">
                         <img src="assets/images/icon1.png" alt="easy-to-customized">
@@ -73,7 +72,7 @@
       <div class="col-md-7 d-medium-none">
         <div class="about-right">
           <div class="about-phone">
-            <img src="assets/images/img1.jpg" class="img-fluid" alt="aboutus">
+            <img [src]="informationData.img" class="img-fluid" alt="aboutus">
           </div>
         </div>
       </div>

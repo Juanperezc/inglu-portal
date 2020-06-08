@@ -15,15 +15,15 @@
           <div class="blog-item" *ngFor="let bg of blog">
             <div class="blog-block">
               <div class="blog-box">
-                <div class="overflow-hidden"><a [routerLink]="'/blog/details'"><img class="new-img" [src]="bg.image" alt=""></a></div>
+                <div class="overflow-hidden"><a [routerLink]="'/blog/details/' + bg.id"><img class="new-img" [src]="bg.img" alt=""></a></div>
               </div>
             </div>
             <div class="blog-text">
-              <h6>{{bg.date}}</h6>
-              <a [routerLink]="'/blog/details'">
+              <h6>{{bg.updated_at}}</h6>
+              <a [routerLink]="'/blog/details/' + bg.id">
                 <h3>{{bg.title}}</h3>
               </a>
-              <h5>{{bg.postedBy}}</h5>
+              <h5>{{bg.author}}</h5>
             </div>
           </div>
         </owl-carousel>
