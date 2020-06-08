@@ -8,8 +8,8 @@ import { ClubTeamItemService } from "../../services/ClubTeamItemService.service"
   styleUrls: ["./team.component.scss"],
 })
 export class TeamComponent implements OnInit{
-  private teamItems = [];
-  private teamInfo: any = null;
+  public teamItems = [];
+  public teamInfo: any = null;
 
   // DomSanitizer for safe html content.
   constructor(

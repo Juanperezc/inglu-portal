@@ -9,7 +9,7 @@ declare var $: any;
   styleUrls: ['./intro-two.component.scss']
 })
 export class IntroTwoComponent implements AfterViewInit,OnInit {
-  private setting: any;
+  public setting: any;
   @ViewChild('video') videoElement: ElementRef;	
   
   constructor(private clubSettingsService: ClubSettingsService) { }

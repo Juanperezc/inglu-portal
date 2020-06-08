@@ -9,8 +9,8 @@ import { ClubTaskItemService } from 'src/app/services/ClubTaskItemService.servic
 })
 export class FeatureComponent implements OnInit {
 
-  private taskItemData = [];
-  private taskData: any = null;
+  public taskItemData = [];
+  public taskData: any = null;
 
   constructor(
     private clubTaskService: ClubTaskService,

@@ -8,8 +8,8 @@ import { ClubImageService } from '../../services/ClubImageService.service';
   styleUrls: ['./screenshot.component.scss']
 })
 export class ScreenshotComponent implements OnInit {
-	private imageItems = [];
-	private imageInfo: any = null;
+	public imageItems = [];
+	public imageInfo: any = null;
 
 	async ngOnInit() {
 		await this.loadImageInfo();

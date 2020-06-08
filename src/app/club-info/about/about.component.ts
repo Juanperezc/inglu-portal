@@ -8,7 +8,7 @@ import { ClubInformationService } from '../../services/ClubInformationService.se
 })
 export class AboutComponent implements OnInit {
 
-  private informationData : any = null;
+  public informationData : any = null;
   constructor(private clubInformationService: ClubInformationService) { }
 
   async ngOnInit() {

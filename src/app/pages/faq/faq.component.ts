@@ -7,7 +7,7 @@ import { FaqService } from '../../services/FaqService.service';
   styleUrls: ['./faq.component.scss']
 })
 export class FaqComponent implements OnInit {
-  private faqs = []
+  public faqs = []
   constructor(private faqService: FaqService) { }
 
   async ngOnInit() {
