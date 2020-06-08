@@ -7,7 +7,7 @@ import { ClubJoinService } from '../../services/ClubJoinService.service';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent implements OnInit {
-  private info: any = null;
+  public info: any = null;
   constructor(private clubJoinService: ClubJoinService) { }
 
   async ngOnInit() {
