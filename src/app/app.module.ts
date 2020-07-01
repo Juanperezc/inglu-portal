@@ -10,13 +10,15 @@ import { DemoComponent } from './demo/demo.component';
 import { BlogComponent } from './blog/blog.component';
 import {ClubInfoComponent} from './club-info/club-info.component';
 import * as $ from 'jquery';
+import { DiabetesComponent } from './diabetes/diabetes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
     BlogComponent,
-    ClubInfoComponent
+    ClubInfoComponent,
+    DiabetesComponent
   ],
   imports: [
     BrowserModule,
