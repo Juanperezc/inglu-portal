@@ -1,36 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ClubPostService } from '../../services/ClubPostService.service';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
 
-    constructor() { }
+    constructor(private clubPostService: ClubPostService) { }
     
+    async ngOnInit(){
+     await this.loadBlogItems();
+    }
     // Blog Carousel
-    public blog = [{
-        image: 'assets/images/blog/Coronavirus.jpg',
-        date: '25 marzo 2020',
-        title: 'Coronavirus y diabetes: preparados, no asustados',
-        postedBy: 'Publicado por Pedro Hernandez',
-      }, {
-        image: 'assets/images/blog/tel.jpg',
-        date: '1 marzo 2020',
-        title: 'Herramientas móviles para la diabetes mejoran el control glucémico',
-        postedBy: 'Publicado por James Clark',
-      }, {
-        image: 'assets/images/blog/Adolescencia.jpg',
-        date: '26 febrero 2020',
-        title: 'Cómo afrontar la diabetes en la adolescencia',
-        postedBy: 'Publicado por Vanessa Garcia',
-      }, {
-        image: 'assets/images/blog/Ciclismo.jpg',
-        date: '20 Febrero 2020',
-        title: 'Diabetes y ciclismo: sí se puede.',
-        postedBy: 'Publicada por Rafael Vizcaya',
-    }]
+    public blog = []
 
 
     // Blog Carousel Options
@@ -59,4 +43,28 @@ export class BlogComponent {
         }
 	}
 
+  async loadBlogItems() {
+    try {
+      /* 	GlobalService.ShowSweetLoading(); */
+      const blogItems: any = await this.clubPostService.index(4);
+
+      const blogItemsData = blogItems.data;
+
+      blogItemsData.forEach((element: any) => {
+        console.log(element, element);
+        this.blog.push({
+          id: element.id,
+          img: element.photo,
+          updated_at: element.updated_at,
+          title: element.title,
+          author: element.author,
+       
+        });
+      });
+
+    } catch (error) {
+      console.error("error", error);
+      /* GlobalService.CloseSweet(); */
+    }
+  }
 }

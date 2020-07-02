@@ -8,26 +8,16 @@
   <div class="container">
     <div class="row">
       <div class="feature-phone">
-        <img src="assets/images/MedidorGlu.png" class="img-fluid" alt="" />
+        <img [src]="info.img" class="img-fluid" alt="" />
       </div>
       <div class="offset-lg-4 col-lg-8">
         <div class="row">
           <div class="col-sm-12 mrgn-md-top">
-            <h2 class="title">¿ Por que inscribirse en el <span>CLUB ?</span></h2>
+              <h2 class="title"><span>{{ info && info.title }}</span></h2>
           </div>
           <div class="row">
             <div class="col-sm-12 mrgn-md-top">
-              <h3 class="title mins">El club de Diabetes es un espacio de atención
-                 especializada en nutrición y apoyo psicológico, accesible y eficiente, orientado
-                 a mejorar la calidad de vida de los pacientes con diagnósticos de alteraciones de la glucosa como la diabetes.</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 mrgn-md-top">
-              <h3 class="title mins">Si padeces de diabetes o algunos de tus familiares o amigos posee dicha patología,
-                dale una oportunidad al club y descubre como con su ayuda puedes llevar una vida mas amena, conocer
-                y relacionarse con otras personas que sufren la misma enfermedad e integrar a tu familia a un estilo
-                de vida saludable donde se apoyen mutuamente.
+            <h3 class="title mins">{{ info && info.subtitle}}
             </h3>
             </div>
           </div>
@@ -45,85 +35,6 @@
               </div>
             </div>
         </div>
-          <!-- <div class="col-12">
-            <ul class="feature-style">
-              <li>
-                <div class="feature-icon">
-                  <img src="assets/images/icon/1.png" alt="icon" />
-                </div>
-                <div class="feature-subtitle">
-                  <h3>Aprende</h3>
-                </div>
-                <div>
-                  <p>
-                    La principal función del club es garantizar que cada uno de los pacientes reciba la capacitación (conocimiento, habilidades y destrezas) indispensable para el buen control de la enfermedad.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <img src="assets/images/icon/3.png" alt="icon" />
-                </div>
-                <div class="feature-subtitle">
-                  <h3>Coopera</h3>
-                </div>
-                <div>
-                  <p>
-                   El club permite la convivencia de los pacientes entre sí y con los miembros del equipo de salud. De esta manera puede ayudar a resolver los aspectos emocionales Y afectivos, que acompañan a la enfermedad.
-                </div>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <img src="assets/images/icon/5.png" alt="icon" />
-                </div>
-                <div class="feature-subtitle">
-                  <h3>Organiza</h3>
-                </div>
-                <div>
-                  <p>
-                    Los pacientes organizados son capaces de obtener recursos propios, para la adquisición colectiva de insumos necesarios para el control metabólico continuo.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div> -->
-          <!--   <div class="col-12 col-md-6 sm-m-top">
-            <ul class="feature-style">
-              <li>
-                <div class="feature-icon">
-                  <img src="assets/images/icon/2.png" alt="icon">
-                </div>
-                <div class="feature-subtitle">
-                  <h3>quick update</h3>
-                </div>
-                <div>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                </div>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <img src="assets/images/icon/4.png" alt="icon">
-                </div>
-                <div class="feature-subtitle">
-                  <h3>100% secure</h3>
-                </div>
-                <div>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                </div>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <img src="assets/images/icon/6.png" alt="icon">
-                </div>
-                <div class="feature-subtitle">
-                  <h3>24 x 7 support</h3>
-                </div>
-                <div>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                </div>
-              </li>
-            </ul>
-          </div> -->
         </div>
       </div>
     </div>

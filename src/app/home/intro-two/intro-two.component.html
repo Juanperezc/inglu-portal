@@ -8,13 +8,11 @@
             <div class="contain">
             <!--   <img src="assets/images/home2/logo-icon.png" alt="logo"> -->
              <!--  <h4>Landing page for</h4> -->
-              <h1 class="text-white">Club de Diabeticos 
+              <h1 class="text-white">{{setting.title}}
               </h1>
-              <h1 class="text-white">Las Mercedes
-              </h1>
-              <p class="slide-cap-desc">La ayuda que tu cuerpo y mente necesitan</p>
+              <p class="slide-cap-desc">{{setting.subitle}}</p>
               <!-- <a [routerLink]="'/home'"><img src="assets/images/appstore.png" alt="appstore" class="store"></a> -->
-              <a [routerLink]="'/home'"><img class="ml-20 store" src="assets/images/play-store.png" alt="play-store"></a>
+              <a [href]="setting.playstore_url"><img class="ml-20 store" src="assets/images/play-store.png" alt="play-store"></a>
             </div>
            <!--  <div class="play-button">
               <a #video class="popup-vimeo animated-circle" href="https://player.vimeo.com/video/54298665?color=ECCE52"><img src="assets/images/home2/play-button.png" alt="play-button" class="img-fluid"></a>

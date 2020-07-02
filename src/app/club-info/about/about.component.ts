@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClubInformationService } from '../../services/ClubInformationService.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  public informationData : any = null;
+  constructor(private clubInformationService: ClubInformationService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.loadInformationData();
+  }
+
+  async loadInformationData(){
+    try {
+      const information: any = await this.clubInformationService.show(1);
+      const informationData = information.data;
+      this.informationData = informationData;
+      } catch (error) {
+      console.error("error", error);
+      /* GlobalService.CloseSweet(); */
+      }
   }
 
 }
