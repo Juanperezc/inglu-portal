@@ -1583,11 +1583,12 @@
         transition: all 0.3s ease;
       }
     }
-
+   
     .blog-box {
       padding: 5px;
       background-color: $white;
       img {
+        
         opacity: 1;
         transition: .3s ease-in-out;
         overflow: hidden;

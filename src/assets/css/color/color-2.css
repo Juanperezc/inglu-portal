@@ -79,11 +79,11 @@ h1 {
 }
 
 .about {
-  background-image: url(../../images/color/color-2/about-bg.png);
+/*   background-image: url(../../images/color/color-2/about-bg.png); */
 }
 
 .about-right {
-  background: linear-gradient(to bottom, #21ecff 0, #2cc6ff 99%);
+ /*  background: linear-gradient(to bottom, #21ecff 0, #2cc6ff 99%); */
 }
 
 .address-bar {

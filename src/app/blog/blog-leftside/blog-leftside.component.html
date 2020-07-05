@@ -34,20 +34,29 @@
                 <div class="blog-box">
                   <div class="overflow-hidden">
                     <a [routerLink]="'/blog/details/' + blog.id"
-                      ><img
-                        [src]="blog.img"
-                        alt="blog"
-                        class="img-fluid"
+                      ><img [src]="blog.img" alt="blog" class="img-fluid img-blog-left"
                     /></a>
                   </div>
                 </div>
               </div>
               <div class="blog-text">
                 <a [routerLink]="'/blog/details/' + blog.id">
-                  <h3>{{ blog.title }}</h3>
-                  <p>{{ blog.description }}</p>
+                  <h3>
+                    {{
+                      blog.title.length > 30
+                        ? (blog.title | slice: 0:30) + "..."
+                        : blog.title
+                    }}
+                  </h3>
+                  <!--  <p>{{ blog.description }}</p> -->
                 </a>
-                <h5>{{ blog.author }}</h5>
+                <h5>
+                  {{
+                    blog.author.length > 15
+                      ? (blog.author | slice: 0:15) + "..."
+                      : blog.author
+                  }}
+                </h5>
               </div>
             </div>
           </div>
@@ -67,7 +76,6 @@
                     {{ cat.description }}
                   </a>
                 </li>
-            
               </ul>
             </div>
           </div>
@@ -75,26 +83,21 @@
           <div class="blog-divider"></div>
           <div class="recent-blog marg-20">
             <div *ngFor="let blog of blogItemsShort" class="media">
-              <img
-                class="mr-3 img64"
-                [src]="blog.img"
-                alt="blog"
-              />
+              <img class="mr-3 img64" [src]="blog.img" alt="blog" />
               <div class="media-body">
                 <a [routerLink]="'/blog/details' + blog.id">
                   <h5 class="mt-0">
                     {{
-                    blog.title > 15
-                        ? ( blog.title | slice: 0:15) + "..."
+                      blog.title.length > 15
+                        ? (blog.title | slice: 0:15) + "..."
                         : blog.title
                     }}
                   </h5>
                   <!-- como poner lo de los 3 punticos -->
                 </a>
-                <p class="m-0">{{blog.updated_at}}</p>
+                <p class="m-0">{{ blog.updated_at }}</p>
               </div>
             </div>
-          
           </div>
         </div>
       </div>
